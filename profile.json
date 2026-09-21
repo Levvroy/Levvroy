@@ -1,0 +1,48 @@
+{
+  "name": "Jonathan Lewie",
+  "board_id": "LEVVROY-01",
+  "revision": "REV 2026.09",
+  "tagline": [
+    "Teknik Informatika ITB",
+    "firmware, sistem, dan tools kecil yang saya pakai sendiri"
+  ],
+  "site": "levvtzy.xyz",
+  "connector_labels": ["GND", "3V3", "TX", "RX", "IO0", "EN"],
+
+  "sections": [
+    { "file": "section-now",      "num": "01", "title": "NOW",      "note": "yang lagi dikerjakan" },
+    { "file": "section-projects", "num": "02", "title": "PROJECTS", "note": "repo pilihan" },
+    { "file": "section-toolkit",  "num": "03", "title": "TOOLKIT",  "note": "yang saya pakai sehari-hari" },
+    { "file": "section-activity", "num": "04", "title": "ACTIVITY", "note": "diperbarui otomatis tiap hari" }
+  ],
+
+  "projects": [
+    {
+      "name": "PRD-EcoThrow",
+      "desc": "Tempat sampah pintar berbasis ESP32 dengan sistem poin supaya orang mau buang sampah dengan benar.",
+      "stack": ["ESP32", "C++", "HTML"]
+    },
+    {
+      "name": "GANTI-NAMA-REPO",
+      "desc": "Satu atau dua kalimat: masalah apa yang diselesaikan repo ini.",
+      "stack": ["GANTI", "GANTI"]
+    },
+    {
+      "name": "GANTI-NAMA-REPO",
+      "desc": "Satu atau dua kalimat: masalah apa yang diselesaikan repo ini.",
+      "stack": ["GANTI"]
+    },
+    {
+      "name": "GANTI-NAMA-REPO",
+      "desc": "Satu atau dua kalimat: masalah apa yang diselesaikan repo ini.",
+      "stack": ["GANTI"]
+    }
+  ],
+
+  "toolkit": [
+    { "ref": "U1", "group": "Bahasa",   "parts": ["C", "C++", "Java", "Python"] },
+    { "ref": "U2", "group": "Hardware", "parts": ["ESP32", "Arduino"] },
+    { "ref": "U3", "group": "Tools",    "parts": ["Git", "Linux", "VS Code"] },
+    { "ref": "U4", "group": "Visual",   "parts": ["Figma", "Premiere Pro", "After Effects"] }
+  ]
+}
