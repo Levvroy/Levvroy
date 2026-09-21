@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://levvtzy.xyz"><img src="https://img.shields.io/badge/Portfolio-levvtzy.xyz-0f2027?style=flat-square&logo=googlechrome&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/GANTI-USERNAME"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:GANTI@email.com"><img src="https://img.shields.io/badge/Email-say%20hi-2c5364?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/jonathanlewie"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:levrae@email.com"><img src="https://img.shields.io/badge/Email-say%20hi-2c5364?style=flat-square&logo=gmail&logoColor=white" /></a>
 </p>
 
 ---
