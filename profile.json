@@ -1,48 +1,151 @@
 {
   "name": "Jonathan Lewie",
-  "board_id": "LEVVROY-01",
-  "revision": "REV 2026.09",
+  "board_id": "",
+  "revision": "",
   "tagline": [
     "Teknik Informatika ITB",
-    "firmware, sistem, dan tools kecil yang saya pakai sendiri"
+    "13525136"
   ],
   "site": "levvtzy.xyz",
-  "connector_labels": ["GND", "3V3", "TX", "RX", "IO0", "EN"],
-
-  "sections": [
-    { "file": "section-now",      "num": "01", "title": "NOW",      "note": "yang lagi dikerjakan" },
-    { "file": "section-projects", "num": "02", "title": "PROJECTS", "note": "repo pilihan" },
-    { "file": "section-toolkit",  "num": "03", "title": "TOOLKIT",  "note": "yang saya pakai sehari-hari" },
-    { "file": "section-activity", "num": "04", "title": "ACTIVITY", "note": "diperbarui otomatis tiap hari" }
+  "connector_labels": [
+    "GND",
+    "3V3",
+    "TX",
+    "RX",
+    "IO0",
+    "EN"
   ],
-
+  "sections": [
+    {
+      "file": "section-now",
+      "num": "01",
+      "title": "NOW",
+      "note": "yang lagi dikerjakan"
+    },
+    {
+      "file": "section-projects",
+      "num": "02",
+      "title": "PROJECTS",
+      "note": "repo pilihan"
+    },
+    {
+      "file": "section-toolkit",
+      "num": "03",
+      "title": "TOOLKIT",
+      "note": "yang saya pakai sehari-hari"
+    },
+    {
+      "file": "section-activity",
+      "num": "04",
+      "title": "ACTIVITY",
+      "note": "diperbarui otomatis tiap hari"
+    },
+    {
+      "file": "section-contact",
+      "num": "05",
+      "title": "CONTACT",
+      "note": "ajak kolaborasi atau sekadar ngobrol"
+    }
+  ],
   "projects": [
     {
       "name": "PRD-EcoThrow",
-      "desc": "Tempat sampah pintar berbasis ESP32 dengan sistem poin supaya orang mau buang sampah dengan benar.",
-      "stack": ["ESP32", "C++", "HTML"]
+      "meta": "Tim · PRD ITB 2025",
+      "status": "SELESAI",
+      "desc": "Tempat sampah pintar: ESP32 + HC-SR04 mendeteksi tiap lemparan, backend menghitung XP, tier RPG, dan leaderboard antar-fakultas.",
+      "stack": [
+        "ESP32",
+        "FastAPI",
+        "SQLite",
+        "JS"
+      ]
     },
     {
-      "name": "GANTI-NAMA-REPO",
-      "desc": "Satu atau dua kalimat: masalah apa yang diselesaikan repo ini.",
-      "stack": ["GANTI", "GANTI"]
+      "name": "BayerDemosaic",
+      "meta": "Solo · IF1220 + paper",
+      "status": "SELESAI",
+      "desc": "Demosaicing bilinear dari nol untuk RAW Sony A6400. Kanal Bayer diisolasi dengan aljabar Boolean, hasil diukur dengan PSNR dan SSIM.",
+      "stack": [
+        "Python",
+        "NumPy",
+        "rawpy"
+      ]
     },
     {
-      "name": "GANTI-NAMA-REPO",
-      "desc": "Satu atau dua kalimat: masalah apa yang diselesaikan repo ini.",
-      "stack": ["GANTI"]
+      "name": "SIGAP",
+      "meta": "Tim · IF2150 RPL",
+      "status": "BERJALAN",
+      "desc": "Sistem informasi pencegahan kebakaran lahan gambut. Tugas besar Rekayasa Perangkat Lunak, dikerjakan per milestone.",
+      "stack": [
+        "UML",
+        "draw.io"
+      ]
     },
     {
-      "name": "GANTI-NAMA-REPO",
-      "desc": "Satu atau dua kalimat: masalah apa yang diselesaikan repo ini.",
-      "stack": ["GANTI"]
+      "name": "OSjur",
+      "meta": "Tim · IF2130 Sistem Operasi",
+      "status": "BERJALAN",
+      "desc": "Sistem operasi x86 protected mode yang dibangun dari template kosong untuk tugas besar Sistem Operasi.",
+      "stack": [
+        "C",
+        "x86",
+        "Make"
+      ]
     }
   ],
-
   "toolkit": [
-    { "ref": "U1", "group": "Bahasa",   "parts": ["C", "C++", "Java", "Python"] },
-    { "ref": "U2", "group": "Hardware", "parts": ["ESP32", "Arduino"] },
-    { "ref": "U3", "group": "Tools",    "parts": ["Git", "Linux", "VS Code"] },
-    { "ref": "U4", "group": "Visual",   "parts": ["Figma", "Premiere Pro", "After Effects"] }
+    {
+      "ref": "U1",
+      "group": "Bahasa",
+      "parts": [
+        "C",
+        "C++",
+        "Java",
+        "Python"
+      ]
+    },
+    {
+      "ref": "U2",
+      "group": "Hardware",
+      "parts": [
+        "ESP32",
+        "Arduino"
+      ]
+    },
+    {
+      "ref": "U3",
+      "group": "Tools",
+      "parts": [
+        "Git",
+        "Linux",
+        "VS Code"
+      ]
+    },
+    {
+      "ref": "U4",
+      "group": "Visual",
+      "parts": [
+        "Figma",
+        "Premiere Pro",
+        "After Effects"
+      ]
+    }
+  ],
+  "contact": [
+    {
+      "ref": "SW1",
+      "label": "PORTFOLIO",
+      "text": "levvtzy.xyz"
+    },
+    {
+      "ref": "SW2",
+      "label": "LINKEDIN",
+      "text": "Jonathan Lewie"
+    },
+    {
+      "ref": "SW3",
+      "label": "EMAIL",
+      "text": "levvrae@gmail.com"
+    }
   ]
 }
