@@ -3,15 +3,9 @@
 
 <a href="https://levvtzy.xyz"><img src="./assets/header.svg" width="100%" alt="Jonathan Lewie, Teknik Informatika ITB" /></a>
 
-Halo, saya Lewie. Mahasiswa Teknik Informatika ITB yang paling betah di dua tempat: kode yang dekat ke hardware (mikrokontroler, sistem operasi) dan software kecil yang benar-benar saya pakai sendiri. Di luar itu saya juga ngerjain produksi visual, jadi beberapa repo di sini ada sisi desainnya.
-
 <br />
 
 <img src="./assets/section-now.svg" width="100%" alt="01 Now" />
-
-- **Library aljabar linier di Java**, dibangun dari nol tanpa library eksternal (tugas besar IF2123, repo private sampai rilis)
-- **OSjur**, sistem operasi x86 protected mode untuk IF2130
-- **SIGAP**, sistem informasi pencegahan kebakaran lahan gambut untuk IF2150
 
 <br />
 
