@@ -1,35 +1,61 @@
-<div align="center">
+<!-- ============ HEADER ============ -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Jonathan%20Lewie&fontSize=46&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Informatics%20%40%20ITB&descSize=18&descAlignY=58" alt="header" />
+</p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:F59E0B&height=190&section=header&text=Jonathan%20Lewie&fontSize=52&fontColor=FFFFFF&fontAlign=50&fontAlignY=38&desc=Informatics%20%40%20ITB&descSize=18&descAlignY=60&animation=fadeIn" alt="Jonathan Lewie" width="100%" />
+<p align="center">
+  <a href="https://levvtzy.xyz">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=3500&pause=1200&color=5FB3D4&center=true&vCenter=true&width=560&lines=Low-level+code+%2B+hardware+tinkering;ESP32%2C+Java%2C+C%2C+sedikit+x86;Kadang+ngoding%2C+kadang+ngedit+video" alt="typing" />
+  </a>
+</p>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=F59E0B&center=true&vCenter=true&width=560&height=40&lines=Systems+%2B+automation+builder;Photographer+%26+video+editor;Chief+Editor+%40+Ring+of+Ganesha" alt="Typing SVG" />
+<p align="center">
+  <a href="https://levvtzy.xyz"><img src="https://img.shields.io/badge/Portfolio-levvtzy.xyz-0f2027?style=flat-square&logo=googlechrome&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/GANTI-USERNAME"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:GANTI@email.com"><img src="https://img.shields.io/badge/Email-say%20hi-2c5364?style=flat-square&logo=gmail&logoColor=white" /></a>
+</p>
 
-</div>
+---
 
-<br>
+<!-- ============ ABOUT ============ -->
+<img align="right" width="300" src="./profile/stats.svg" alt="stats" />
 
-Mahasiswa Teknik Informatika ITB angkatan 2025.
+Informatics Engineering @ Institut Teknologi Bandung
 
-## Tools
+<br clear="right" />
 
-<img src="https://skillicons.dev/icons?i=c,py,js,ts,nodejs,react,astro,electron,docker,git,ae&theme=dark" alt="Tech stack" />
+<!-- ============ TOOLS ============ -->
+### Tools
 
-<br>
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=c,cpp,java,py,arduino,html,css,git,linux,vscode,figma,pr,ae&theme=dark" alt="skills" />
+</p>
 
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
-![Gemini API](https://img.shields.io/badge/Gemini_API-1C69FF?style=flat-square&logo=googlegemini&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
-![KiCad](https://img.shields.io/badge/KiCad-314CB0?style=flat-square&logo=kicad&logoColor=white)
-![DaVinci Resolve](https://img.shields.io/badge/DaVinci_Resolve-233A51?style=flat-square&logo=davinciresolve&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
+<!-- ============ ACTIVITY ============ -->
+### Aktivitas
 
-Kamera: Sony A6400, workflow S-Log3, grading di DaVinci Resolve.
+<p align="center">
+  <img height="165" src="./profile/streak.svg" alt="streak" />
+  <img height="165" src="./profile/top-langs.svg" alt="top languages" />
+</p>
 
-## Kontak
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg" />
+    <img src="./profile-3d-contrib/profile-green-animate.svg" alt="3D contributions" />
+  </picture>
+</p>
 
-[![Website](https://img.shields.io/badge/levvtzy.xyz-F59E0B?style=for-the-badge&logo=googlechrome&logoColor=black)](https://levvtzy.xyz)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jonathanlewie)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/lewithan)
-[![Email](https://img.shields.io/badge/Email-30363D?style=for-the-badge&logo=gmail&logoColor=white)](mailto:levvrae@gmail.com)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile/snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./profile/snake.svg" />
+    <img src="./profile/snake.svg" alt="snake eating contributions" />
+  </picture>
+</p>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:F59E0B&height=90&section=footer" width="100%" alt="" />
+<!-- ============ FOOTER ============ -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=110&section=footer" alt="footer" />
+</p>
