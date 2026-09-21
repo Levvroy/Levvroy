@@ -41,7 +41,7 @@
 
 <p>
   <a href="https://levvtzy.xyz"><img src="./assets/cta-portfolio.svg" width="32.5%" alt="Portfolio: levvtzy.xyz" /></a>
-  <a href="https://www.linkedin.com/in/GANTI-USERNAME"><img src="./assets/cta-linkedin.svg" width="32.5%" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/jonathanlewie"><img src="./assets/cta-linkedin.svg" width="32.5%" alt="LinkedIn" /></a>
   <a href="mailto:levvrae@gmail.com"><img src="./assets/cta-email.svg" width="32.5%" alt="Email: levvrae@gmail.com" /></a>
 </p>
 
