@@ -1,25 +1,22 @@
 <!-- ============ HEADER ============ -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Jonathan%20Lewie&fontSize=46&fontColor=ffffff&fontAlignY=36&animation=fadeIn&desc=Informatics%20%40%20ITB&descSize=18&descAlignY=58" alt="header" />
+  <a href="https://levvtzy.xyz"><img src="./assets/header.svg" width="100%" alt="Jonathan Lewie, Informatics @ ITB" /></a>
 </p>
-<p align="center">
-  <a href="https://levvtzy.xyz">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&duration=3500&pause=1200&color=5FB3D4&center=true&vCenter=true&width=560&lines=Low-level+code+%2B+hardware+tinkering;ESP32%2C+Java%2C+C%2C+sedikit+x86;Kadang+ngoding%2C+kadang+ngedit+video" alt="typing" />
-  </a>
-</p>
+
 <p align="center">
   <a href="https://levvtzy.xyz"><img src="https://img.shields.io/badge/Portfolio-levvtzy.xyz-0f2027?style=flat-square&logo=googlechrome&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/GANTI-USERNAME"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:GANTI@email.com"><img src="https://img.shields.io/badge/Email-say%20hi-2c5364?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/jonathanlewie"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+  <a href="mailto:levvrae@email.com"><img src="https://img.shields.io/badge/Email-say%20hi-2c5364?style=flat-square&logo=gmail&logoColor=white" /></a>
 </p>
+
 ---
 
 <!-- ============ ABOUT ============ -->
 <img align="right" width="300" src="./profile/stats.svg" alt="stats" />
 
-Informatics Engineering @ Institut Teknologi Bandung
-
 <br clear="right" />
+
+<!-- ============ PROJECTS ============ -->
 
 <!-- ============ TOOLS ============ -->
 ### Tools
