@@ -128,8 +128,11 @@ def build_header(cfg):
     b += [fiducial(96, 330), fiducial(1110, 36)]
 
     # silkscreen kiri atas
-    b.append(t(70, 60, cfg["board_id"], 14, SILK, spacing=1))
-    b.append(t(70 + text_w(cfg["board_id"], 14) + 24, 60, cfg["revision"], 14, SILK_2, spacing=1))
+    if cfg.get("board_id"):
+        b.append(t(70, 60, cfg["board_id"], 14, SILK, spacing=1))
+    if cfg.get("revision"):
+        rx = 70 + (text_w(cfg["board_id"], 14) + 24 if cfg.get("board_id") else 0)
+        b.append(t(rx, 60, cfg["revision"], 14, SILK_2, spacing=1))
 
     # nama + tagline
     b.append(t(66, 160, cfg["name"], 62, SILK, weight=700, spacing=-1))
@@ -233,24 +236,53 @@ def wrap(s, max_chars):
 
 
 def build_card(p, idx):
-    W, H = 600, 230
+    W, H = 600, 250
+    running = p.get("status", "").upper() != "SELESAI"
     b = [board(W, H, 12)]
     b += [mount_hole(W - 26, 26, 9), mount_hole(W - 26, H - 26, 9)]
     b.append(t(30, 40, f"P{idx}", 12, SILK_2))
     b.append(f'<rect x="{30 + text_w(f"P{idx}", 12) + 10}" y="31" width="10" height="10" rx="1" fill="{GOLD}"/>')
-    b.append(t(28, 82, p["name"], 26, SILK, weight=700))
-    y = 116
+    # status: LED hijau = selesai, kuning berkedip = masih berjalan
+    if p.get("status"):
+        sx = W - 52
+        b.append(t(sx, 40, p["status"], 11, SILK_2, anchor="end", spacing=1))
+        lx = sx - text_w(p["status"], 11) - len(p["status"]) - 16
+        color = "#e0a82e" if running else "#46a06b"
+        cls = ' class="led"' if running else ""
+        b.append(f'<rect{cls} x="{lx:.0f}" y="31" width="10" height="10" rx="1.5" fill="{color}"/>')
+    b.append(t(28, 84, p["name"], 26, SILK, weight=700))
+    if p.get("meta"):
+        b.append(t(30, 110, p["meta"], 13, GOLD))
+    y = 142
     for line in wrap(p["desc"], 56)[:3]:
         b.append(t(30, y, line, 15, SILK_2))
-        y += 22
-    # stack sebagai pad berlabel
+        y += 21
     x = 30
-    for s in p["stack"]:
-        b.append(f'<rect x="{x}" y="186" width="10" height="10" rx="1" fill="{GOLD}"/>')
-        b.append(t(x + 16, 195, s, 13, SILK))
-        x += 16 + text_w(s, 13) + 22
-    b.append(t(W - 52, 195, "REPO ->", 12, SILK_2, anchor="end"))
-    return svg(W, H, "".join(b), p["name"])
+    for s_ in p["stack"]:
+        b.append(f'<rect x="{x}" y="206" width="10" height="10" rx="1" fill="{GOLD}"/>')
+        b.append(t(x + 16, 215, s_, 13, SILK))
+        x += 16 + text_w(s_, 13) + 22
+    b.append(t(W - 52, 215, "REPO ->", 12, SILK_2, anchor="end"))
+    return svg(W, H, "".join(b), p["name"], LED_STYLE if running else "")
+
+
+# ---------------------------------------------------------------- CTA (tactile switch)
+def build_cta(c):
+    W, H = 400, 120
+    b = [board(W, H, 12)]
+    # footprint tact switch 6x6: outline silk, 4 pad, cap bulat
+    cx, cy = 66, 60
+    b.append(f'<rect x="{cx - 34}" y="{cy - 34}" width="68" height="68" rx="3" fill="none" stroke="{SILK}" stroke-opacity=".6" stroke-width="1.4"/>')
+    for dx in (-34, 34):
+        for dy in (-22, 22):
+            b.append(f'<rect x="{cx + dx - 7}" y="{cy + dy - 5}" width="14" height="10" rx="1" fill="{GOLD}"/>')
+    b.append(f'<rect x="{cx - 24}" y="{cy - 24}" width="48" height="48" rx="4" fill="#1a1f21" stroke="#2c3336" stroke-width="1.5"/>')
+    b.append(f'<circle cx="{cx}" cy="{cy}" r="15" fill="#252b2e" stroke="#3a4245" stroke-width="1.5"/>')
+    b.append(t(128, 46, f'{c["ref"]}  {c["label"]}', 12, SILK_2, spacing=1))
+    size = 22 if len(c["text"]) <= 18 else 18
+    b.append(t(128, 80, c["text"], size, SILK, weight=700))
+    b.append(t(W - 22, 46, "->", 13, GOLD, anchor="end"))
+    return svg(W, H, "".join(b), f'{c["label"]}: {c["text"]}')
 
 
 # ---------------------------------------------------------------- toolkit (BOM)
@@ -281,7 +313,7 @@ def build_footer(cfg):
     b = [board(W, H, 12)]
     b.append(mount_hole(30, 40, 10))
     b.append(mount_hole(W - 30, 40, 10))
-    left = f"{cfg['name']} · {cfg['board_id']}"
+    left = cfg["name"] + (f" · {cfg['board_id']}" if cfg.get("board_id") else "")
     b.append(t(60, 45, left, 13, SILK_2))
     right_w = text_w(cfg["site"], 13)
     b.append(t(W - 60, 45, cfg["site"], 13, SILK_2, anchor="end"))
@@ -308,6 +340,8 @@ def main():
         files[sec["file"] + ".svg"] = build_section(sec)
     for i, p in enumerate(cfg["projects"], start=1):
         files[f"project-{i}.svg"] = build_card(p, i)
+    for c in cfg.get("contact", []):
+        files[f"cta-{c['label'].lower()}.svg"] = build_cta(c)
 
     for name, content in files.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
