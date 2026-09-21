@@ -3,15 +3,15 @@
 
 <a href="https://levvtzy.xyz"><img src="./assets/header.svg" width="100%" alt="Jonathan Lewie, Teknik Informatika ITB" /></a>
 
-<p align="center">
-  <a href="https://levvtzy.xyz">levvtzy.xyz</a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/jonathanlewie">LinkedIn</a> &nbsp;·&nbsp;
-  <a href="mailto:levvraee@email.com">Email</a>
-</p>
+Halo, saya Lewie. Mahasiswa Teknik Informatika ITB yang paling betah di dua tempat: kode yang dekat ke hardware (mikrokontroler, sistem operasi) dan software kecil yang benar-benar saya pakai sendiri. Di luar itu saya juga ngerjain produksi visual, jadi beberapa repo di sini ada sisi desainnya.
 
 <br />
 
 <img src="./assets/section-now.svg" width="100%" alt="01 Now" />
+
+- **Library aljabar linier di Java**, dibangun dari nol tanpa library eksternal (tugas besar IF2123, repo private sampai rilis)
+- **OSjur**, sistem operasi x86 protected mode untuk IF2130
+- **SIGAP**, sistem informasi pencegahan kebakaran lahan gambut untuk IF2150
 
 <br />
 
@@ -19,11 +19,11 @@
 
 <p>
   <a href="https://github.com/Levvroy/PRD-EcoThrow"><img src="./assets/project-1.svg" width="49%" alt="PRD-EcoThrow" /></a>
-  <a href="https://github.com/Levvroy/GANTI"><img src="./assets/project-2.svg" width="49%" alt="project 2" /></a>
+  <a href="https://github.com/Levvroy/BayerDemosaic"><img src="./assets/project-2.svg" width="49%" alt="BayerDemosaic" /></a>
 </p>
 <p>
-  <a href="https://github.com/Levvroy/GANTI"><img src="./assets/project-3.svg" width="49%" alt="project 3" /></a>
-  <a href="https://github.com/Levvroy/GANTI"><img src="./assets/project-4.svg" width="49%" alt="project 4" /></a>
+  <a href="https://github.com/Levvroy/IF2150-RPL-K01-G08"><img src="./assets/project-3.svg" width="49%" alt="SIGAP" /></a>
+  <a href="https://github.com/mobyy17/OSjur"><img src="./assets/project-4.svg" width="49%" alt="OSjur" /></a>
 </p>
 
 <br />
@@ -46,5 +46,13 @@
 <img src="./profile/snake.svg" width="100%" alt="snake eating the contribution graph" />
 
 <br />
+
+<img src="./assets/section-contact.svg" width="100%" alt="05 Contact" />
+
+<p>
+  <a href="https://levvtzy.xyz"><img src="./assets/cta-portfolio.svg" width="32.5%" alt="Portfolio: levvtzy.xyz" /></a>
+  <a href="https://www.linkedin.com/in/GANTI-USERNAME"><img src="./assets/cta-linkedin.svg" width="32.5%" alt="LinkedIn" /></a>
+  <a href="mailto:levvrae@gmail.com"><img src="./assets/cta-email.svg" width="32.5%" alt="Email: levvrae@gmail.com" /></a>
+</p>
 
 <img src="./assets/footer.svg" width="100%" alt="footer" />
