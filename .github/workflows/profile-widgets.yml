@@ -11,14 +11,19 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-widgets
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # 1. Snake yang memakan contribution graph
       - name: Generate snake
+        continue-on-error: true
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -30,6 +35,7 @@ jobs:
 
       # 2. Contribution calendar versi 3D
       - name: Generate 3D contributions
+        continue-on-error: true
         uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,6 +43,7 @@ jobs:
 
       # 3. Streak card
       - name: Generate streak card
+        continue-on-error: true
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
           options: user=${{ github.repository_owner }}&theme=dark&hide_border=true&background=0d1117&ring=5FB3D4&fire=5FB3D4&currStreakLabel=5FB3D4&timezone=Asia/Jakarta&locale=id
@@ -45,6 +52,7 @@ jobs:
 
       # 4. Stats card (rank_icon=github supaya tidak menampilkan huruf rank)
       - name: Generate stats card
+        continue-on-error: true
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
@@ -54,6 +62,7 @@ jobs:
 
       # 5. Top languages card
       - name: Generate top languages card
+        continue-on-error: true
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: top-langs
@@ -65,6 +74,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A profile profile-3d-contrib
+          for d in profile profile-3d-contrib; do
+            [ -d "$d" ] && git add -A "$d"
+          done
           git commit -m "chore: update profile widgets" || exit 0
+          git pull --rebase -X theirs origin main
           git push
