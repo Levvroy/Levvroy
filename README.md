@@ -3,11 +3,7 @@
 
 <a href="https://levvtzy.xyz"><img src="./assets/header.svg" width="100%" alt="Jonathan Lewie, Teknik Informatika ITB" /></a>
 
-<br />
-
 <img src="./assets/section-now.svg" width="100%" alt="01 Now" />
-
-<br />
 
 <img src="./assets/section-projects.svg" width="100%" alt="02 Projects" />
 
