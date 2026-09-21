@@ -3,10 +3,13 @@ name: Update profile widgets
 on:
   schedule:
     - cron: "0 18 * * *" # 18:00 UTC = 01:00 WIB, sekali sehari
-  workflow_dispatch: # bisa dijalankan manual dari tab Actions
+  workflow_dispatch:
   push:
     branches: [main]
-    paths: [".github/workflows/profile-widgets.yml"]
+    paths:
+      - ".github/workflows/profile-widgets.yml"
+      - "profile.json"
+      - "scripts/**"
 
 permissions:
   contents: write
@@ -21,19 +24,22 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # 1. Snake yang memakan contribution graph
+      # 0. Aset desain (header, section, kartu proyek, toolkit, footer) dari profile.json
+      - name: Build design assets
+        run: python3 scripts/build_assets.py
+
+      # 1. Snake, warna disamakan dengan tema PCB
       - name: Generate snake
         continue-on-error: true
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            profile/snake.svg?color_snake=2c5364
-            profile/snake-dark.svg?palette=github-dark&color_snake=5FB3D4
+            profile/snake.svg?color_snake=#c9a14a&color_dots=#1a3a2c,#1f5a3f,#2d7a52,#46a06b,#7cc48f
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 2. Contribution calendar versi 3D
+      # 2. Contribution calendar 3D
       - name: Generate 3D contributions
         continue-on-error: true
         uses: yoshi389111/github-profile-3d-contrib@latest
@@ -46,35 +52,25 @@ jobs:
         continue-on-error: true
         uses: DenverCoder1/github-readme-streak-stats@main
         with:
-          options: user=${{ github.repository_owner }}&theme=dark&hide_border=true&background=0d1117&ring=5FB3D4&fire=5FB3D4&currStreakLabel=5FB3D4&timezone=Asia/Jakarta&locale=id
+          options: user=${{ github.repository_owner }}&hide_border=true&border_radius=12&background=0d2a1f&stroke=1f4d38&ring=c9a14a&fire=c9a14a&currStreakNum=ece8dc&sideNums=ece8dc&currStreakLabel=c9a14a&sideLabels=9fb3a6&dates=9fb3a6&timezone=Asia/Jakarta&locale=id&card_height=195
           path: profile/streak.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # 4. Stats card (rank_icon=github supaya tidak menampilkan huruf rank)
+      # 4. Stats card
       - name: Generate stats card
         continue-on-error: true
         uses: stats-organization/github-readme-stats-action@v2
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&hide_border=true&bg_color=0d1117&title_color=5FB3D4&icon_color=5FB3D4&text_color=c9d1d9&include_all_commits=true
+          options: username=${{ github.repository_owner }}&show_icons=true&rank_icon=github&hide_border=true&border_radius=12&bg_color=0d2a1f&title_color=ece8dc&icon_color=c9a14a&text_color=9fb3a6&ring_color=c9a14a&include_all_commits=true&card_width=495
           path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      # 5. Top languages card
-      - name: Generate top languages card
-        continue-on-error: true
-        uses: stats-organization/github-readme-stats-action@v2
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&hide_border=true&bg_color=0d1117&title_color=5FB3D4&text_color=c9d1d9
-          path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit & push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for d in profile profile-3d-contrib; do
+          for d in assets profile profile-3d-contrib; do
             [ -d "$d" ] && git add -A "$d"
           done
           git commit -m "chore: update profile widgets" || exit 0
