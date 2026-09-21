@@ -1,56 +1,50 @@
-<!-- ============ HEADER ============ -->
-<p align="center">
-  <a href="https://levvtzy.xyz"><img src="./assets/header.svg" width="100%" alt="Jonathan Lewie, Informatics @ ITB" /></a>
-</p>
+<!-- Semua gambar di assets/ dibuat oleh scripts/build_assets.py dari profile.json.
+     Ubah profile.json, bukan file SVG-nya. Workflow akan membangun ulang otomatis. -->
+
+<a href="https://levvtzy.xyz"><img src="./assets/header.svg" width="100%" alt="Jonathan Lewie, Teknik Informatika ITB" /></a>
 
 <p align="center">
-  <a href="https://levvtzy.xyz"><img src="https://img.shields.io/badge/Portfolio-levvtzy.xyz-0f2027?style=flat-square&logo=googlechrome&logoColor=white" /></a>
-  <a href="https://www.linkedin.com/in/jonathanlewie"><img src="https://img.shields.io/badge/LinkedIn-connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-  <a href="mailto:levvrae@email.com"><img src="https://img.shields.io/badge/Email-say%20hi-2c5364?style=flat-square&logo=gmail&logoColor=white" /></a>
+  <a href="https://levvtzy.xyz">levvtzy.xyz</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/jonathanlewie">LinkedIn</a> &nbsp;·&nbsp;
+  <a href="mailto:levvraee@email.com">Email</a>
 </p>
 
----
-
-<!-- ============ ABOUT ============ -->
-<img align="right" width="300" src="./profile/stats.svg" alt="stats" />
-
-<br clear="right" />
-
-<!-- ============ PROJECTS ============ -->
-
-<!-- ============ TOOLS ============ -->
-### Tools
-
-<p align="left">
-  <img src="https://skillicons.dev/icons?i=c,cpp,java,py,arduino,html,css,git,linux,vscode,figma,pr,ae&theme=dark" alt="skills" />
-</p>
-
-<!-- ============ ACTIVITY ============ -->
-### Aktivitas
-
-<p align="center">
-  <img height="165" src="./profile/streak.svg" alt="streak" />
-  <img height="165" src="./profile/top-langs.svg" alt="top languages" />
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg" />
-    <img src="./profile-3d-contrib/profile-green-animate.svg" alt="3D contributions" />
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./profile/snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./profile/snake.svg" />
-    <img src="./profile/snake.svg" alt="snake eating contributions" />
-  </picture>
-</p>
-
-<!-- ============ FOOTER ============ -->
 <br />
-<p align="center">
-  <img src="./assets/footer.svg" width="100%" alt="footer" />
+
+<img src="./assets/section-now.svg" width="100%" alt="01 Now" />
+
+<br />
+
+<img src="./assets/section-projects.svg" width="100%" alt="02 Projects" />
+
+<p>
+  <a href="https://github.com/Levvroy/PRD-EcoThrow"><img src="./assets/project-1.svg" width="49%" alt="PRD-EcoThrow" /></a>
+  <a href="https://github.com/Levvroy/GANTI"><img src="./assets/project-2.svg" width="49%" alt="project 2" /></a>
 </p>
+<p>
+  <a href="https://github.com/Levvroy/GANTI"><img src="./assets/project-3.svg" width="49%" alt="project 3" /></a>
+  <a href="https://github.com/Levvroy/GANTI"><img src="./assets/project-4.svg" width="49%" alt="project 4" /></a>
+</p>
+
+<br />
+
+<img src="./assets/section-toolkit.svg" width="100%" alt="03 Toolkit" />
+
+<img src="./assets/toolkit.svg" width="100%" alt="C, C++, Java, Python, ESP32, Arduino, Git, Linux, VS Code, Figma, Premiere Pro, After Effects" />
+
+<br />
+
+<img src="./assets/section-activity.svg" width="100%" alt="04 Activity" />
+
+<p>
+  <img src="./profile/stats.svg" width="49%" alt="GitHub stats" />
+  <img src="./profile/streak.svg" width="49%" alt="streak" />
+</p>
+
+<img src="./profile-3d-contrib/profile-night-green.svg" width="100%" alt="3D contribution calendar" />
+
+<img src="./profile/snake.svg" width="100%" alt="snake eating the contribution graph" />
+
+<br />
+
+<img src="./assets/footer.svg" width="100%" alt="footer" />
