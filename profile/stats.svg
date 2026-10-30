@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Jonathan Lewie&#39;s GitHub Stats, Rank: C</title>
-        <desc id="descId">Total Stars Earned: 6, Total Commits  : 182, Total PRs: 23, Total Issues: 0, Contributed to (last year): 2</desc>
+        <title id="titleId">Jonathan Lewie&#39;s GitHub Stats, Rank: C+</title>
+        <desc id="descId">Total Stars Earned: 6, Total Commits  : 183, Total PRs: 26, Total Issues: 0, Contributed to (last year): 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 220.23292645816773;
+        stroke-dashoffset: 218.3466127761345;
       }
     }
   
@@ -184,7 +184,7 @@
         x="224.01"
         y="12.5"
         data-testid="commits"
-      >182</text>
+      >183</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -199,7 +199,7 @@
         x="224.01"
         y="12.5"
         data-testid="prs"
-      >23</text>
+      >26</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
